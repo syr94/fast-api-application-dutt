@@ -5,6 +5,9 @@ FROM ubuntu:22.04
 # зайдем в контейнер.
 WORKDIR /usr/app
 
+RUN apt update && install -y python3 \
+    python3-pip
+
 #RUN apt update && apt install python3
 # CMD и RUN c помощью этих команд, можно выполнять команды внутри контейнера.
 RUN python3 -m pip install fastapi
